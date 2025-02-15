@@ -12,51 +12,54 @@
         <nav>
             <div class="logo">EduHub</div>
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search resources...">
-                <button id="searchBtn" title="Search resources"><i class="fas fa-search" aria-hidden="true"></i></button>
+                <input type="text" id="searchInput" placeholder="Search subjects...">
+                <button id="searchBtn" title="Search subjects"><i class="fas fa-search" aria-hidden="true"></i></button>
             </div>
-            <button id="themeToggle" class="theme-toggle" title="Toggle dark mode">
-                <i class="fas fa-moon" aria-hidden="true"></i>
-            </button>
+            <div class="nav-actions">
+                <button id="savedResourcesBtn" class="icon-btn" title="Saved Resources">
+                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                </button>
+                <button id="themeToggle" class="theme-toggle" title="Toggle dark mode">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
     <main>
-        <div class="filters">
-            <div class="filter-group">
-                <select id="subjectFilter" title="Filter by subject">
-                    <option value="">All Subjects</option>
-                    <option value="mathematics">Mathematics</option>
-                    <option value="science">Science</option>
-                    <option value="history">History</option>
-                    <option value="literature">Literature</option>
-                </select>
+        <section class="hero">
+            <h1>Welcome to EduHub</h1>
+            <p>Discover educational resources across various subjects</p>
+        </section>
 
-                <select id="typeFilter" title="Filter by type">
-                    <option value="">All Types</option>
-                    <option value="books">Books</option>
-                    <option value="notes">Notes</option>
-                    <option value="pdf">PDF</option>
-                </select>
-
-                <select id="levelFilter" title="Filter by level">
-                    <option value="">All Levels</option>
-                    <option value="beginner">Beginner</option>
-                    <option value="intermediate">Intermediate</option>
-                    <option value="advanced">Advanced</option>
-                </select>
+        <div class="subjects-container">
+            <div class="subjects-grid" id="subjectsContainer">
+                <!-- Subject cards will be dynamically added here -->
             </div>
         </div>
 
-        <div class="resources-grid" id="resourcesContainer">
-            <!-- Resources will be dynamically added here -->
+        <!-- Saved Resources Modal -->
+        <div id="savedResourcesModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Saved Resources</h2>
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="modal-body" id="savedResourcesList">
+                    <!-- Saved resources will be dynamically added here -->
+                </div>
+            </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 EduHub. All rights reserved.</p>
+        <p>&copy; 2025 EduHub. All rights reserved.</p>
     </footer>
 
+    <!-- Notifications Container -->
+    <div id="notificationsContainer" class="notifications-container"></div>
+
     <script src="script.js"></script>
+    <script src="index.js"></script>
 </body>
 </html> 
